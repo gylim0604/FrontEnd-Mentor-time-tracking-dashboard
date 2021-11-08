@@ -1,0 +1,43 @@
+@import 'variables';
+
+// .wrapper {
+//     grid-row: 1/3;
+// }
+.info {
+    background: hsl(246, 80%, 60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    font-weight: $weight-light;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    small {
+        color: $pale-blue;
+        font-size: 0.75em;
+    }
+}
+
+.profile_pic {
+    border-radius: 50% !important;
+    border: 5px solid white !important;
+}
+
+.selection {
+    margin-top: -0.25em;
+    padding: 1.75em 2em 1.25em;
+    font-size: 0.9em;
+    background: hsl(235, 46%, 20%);
+    border-radius: 0 0 10px 10px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-left: 0;
+        a {
+            color: $desaturated-blue;
+            text-decoration: none;
+        }
+    }
+}

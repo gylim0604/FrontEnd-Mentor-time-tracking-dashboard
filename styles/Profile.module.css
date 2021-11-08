@@ -1,0 +1,52 @@
+.info {
+  background: #5847eb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  font-weight: 300;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.info small {
+  color: #bdc1ff;
+  font-size: 0.75em;
+}
+
+.profile_pic {
+  border-radius: 50% !important;
+  border: 5px solid white !important;
+}
+
+.selection {
+  margin-top: -0.25em;
+  padding: 1.75em 2em 1.25em;
+  font-size: 0.9em;
+  background: #1c1f4a;
+  border-radius: 0 0 10px 10px;
+}
+
+.selection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.selection ul a {
+  color: #6f76c8;
+  text-decoration: none;
+}
+/*# sourceMappingURL=Profile.module.css.map */
