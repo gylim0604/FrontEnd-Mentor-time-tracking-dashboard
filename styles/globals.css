@@ -13,7 +13,8 @@ body {
 .grid {
   display: -ms-grid;
   display: grid;
-  gap: 1rem;
+  gap: 1em;
   width: 85vw;
+  padding: 5em 0;
 }
 /*# sourceMappingURL=globals.css.map */
