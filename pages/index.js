@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import TimeCard from '../components/TimeCard';
-import dataJSON from '../public/data.json';
 import Profile from '../components/Profile';
+import { useState } from 'react';
+import { useAppContext } from '../components/AppContext';
 export default function Home() {
-    let data = dataJSON;
+    let {state} = useAppContext();
+    let {data} = state;
     return (
         <div className='grid'>
             <Profile />

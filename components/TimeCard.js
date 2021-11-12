@@ -6,7 +6,6 @@ import Image from 'next/image';
 function TimeCard({ state }) {
     let { title, prev, curr } = state;
     useEffect(() => {
-        console.log(bg);
         return () => {};
     }, []);
     const generateIcon = (title) => {

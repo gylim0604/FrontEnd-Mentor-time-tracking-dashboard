@@ -1,7 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/Profile.module.css';
+import { useAppContext } from './AppContext';
+
+const SelectionLink = ({ title, onClick, active }) => {
+    return (
+        <a href='#' onClick={onClick} className={active ? styles.active : ''}>
+            <li>{title}</li>
+        </a>
+    );
+};
+
 function Profile() {
+    const selection = ['Daily', 'Weekly', 'Monthly'];
+    let { state, handleChange } = useAppContext();
+    let { selected } = state;
     return (
         <div className={styles.wrapper}>
             <div className={styles.info}>
@@ -19,15 +32,14 @@ function Profile() {
             </div>
             <div className={styles.selection}>
                 <ul>
-                    <a href='#'>
-                        <li>Daily</li>
-                    </a>
-                    <a href='#'>
-                        <li>Weekly</li>
-                    </a>
-                    <a href='#'>
-                        <li>Monthly</li>
-                    </a>
+                    {selection.map((el) => (
+                        <SelectionLink
+                            key={el}
+                            onClick={() => handleChange(el)}
+                            title={el}
+                            active={el === selected}
+                        />
+                    ))}
                 </ul>
             </div>
         </div>
