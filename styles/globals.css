@@ -17,4 +17,14 @@ body {
   width: 85vw;
   padding: 5em 0;
 }
+
+@media screen and (min-width: 1020px) {
+  .grid {
+    width: 75vw;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
 /*# sourceMappingURL=globals.css.map */

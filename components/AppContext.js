@@ -5,13 +5,8 @@ const AppContext = createContext();
 
 const filterData = (el) => {
     let reduced = dataJSON.reduce(function (filtered, option) {
-        // if (option.timeframes) {
-        // let someNewValue = { name: option.name, newProperty: 'Foo' };
-        // filtered.push(someNewValue);
-        // }
         let timeframe = option.timeframes;
-        // let fitlered = Object.keys(timeframe).filter((key)=>);
-        console.log(timeframe);
+        filtered.push({ ...option, timeframes: timeframe[el] });
         return filtered;
     }, []);
     return reduced;
@@ -19,8 +14,8 @@ const filterData = (el) => {
 
 export function ContextWrapper({ children }) {
     let initialState = {
-        selected: 'Daily',
-        data: dataJSON,
+        selected: '',
+        data: [],
     };
     const [state, setState] = useState(initialState);
 
@@ -29,7 +24,11 @@ export function ContextWrapper({ children }) {
             value={{
                 state,
                 handleChange: (el) => {
-                    setState({ ...state, selected: el });
+                    setState({
+                        ...state,
+                        data: filterData(el.toLowerCase()),
+                        selected: el,
+                    });
                     filterData(el);
                 },
             }}
