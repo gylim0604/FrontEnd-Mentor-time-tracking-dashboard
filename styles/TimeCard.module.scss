@@ -20,7 +20,7 @@
 
     h3 {
         font-size: 1em;
-        font-size: $weight-bold;
+        font-weight: $weight-bold;
         z-index: 99;
     }
     a {
@@ -35,9 +35,13 @@
         &:hover::before {
             display: block;
         }
-        img {
+        svg {
+            fill: #bbc0ff;
             position: relative;
             z-index: 99;
+            &:hover {
+                fill: white;
+            }
         }
     }
 }
@@ -64,6 +68,23 @@
 .previous {
     font-size: 0.8em;
     color: $desaturated-blue;
+}
+
+@media screen and(min-width: $medium) and (max-width: $large) {
+    .info {
+        h3 {
+            font-size: 0.9em;
+        }
+    }
+    .tracker {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current {
+        font-size: 2em;
+        margin: 0.5em 0;
+    }
 }
 
 @media screen and(min-width: $large) {

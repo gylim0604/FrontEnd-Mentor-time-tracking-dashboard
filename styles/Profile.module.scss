@@ -43,7 +43,13 @@
     color: white;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and(min-width: $medium) and (max-width: $large) {
+    .wrapper {
+        grid-column: 1/4;
+    }
+}
+
+@media screen and (min-width: $large) {
     .wrapper {
         grid-row: 1/3;
     }
@@ -66,7 +72,7 @@
         height: 30%;
         ul {
             flex-direction: column;
-            gap: 1em;
+            gap: 1.25em;
             li {
                 &:hover {
                     color: white;

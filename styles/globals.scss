@@ -15,11 +15,23 @@ body {
     display: grid;
     gap: 1em;
     width: 85vw;
+    max-width: 400px;
     padding: 5em 0;
 }
+
+@media screen and (min-width: $medium) {
+    .grid {
+        width: 75vw;
+        max-width: 900px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
 @media screen and (min-width: $large) {
     .grid {
         width: 75vw;
+        max-width: 900px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }

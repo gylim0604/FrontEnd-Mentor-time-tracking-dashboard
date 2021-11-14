@@ -54,7 +54,15 @@
   color: white;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) and (max-width: 1020px) {
+  .wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
+@media screen and (min-width: 1020px) {
   .wrapper {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -88,7 +96,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1em;
+    gap: 1.25em;
   }
   .selection ul li:hover {
     color: white;

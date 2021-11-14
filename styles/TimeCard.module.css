@@ -19,7 +19,7 @@
 
 .info h3 {
   font-size: 1em;
-  font-size: 500;
+  font-weight: 500;
   z-index: 99;
 }
 
@@ -36,9 +36,14 @@
   display: block;
 }
 
-.info a img {
+.info a svg {
+  fill: #bbc0ff;
   position: relative;
   z-index: 99;
+}
+
+.info a svg:hover {
+  fill: white;
 }
 
 .title {
@@ -76,6 +81,25 @@
 .previous {
   font-size: 0.8em;
   color: #6f76c8;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1020px) {
+  .info h3 {
+    font-size: 0.9em;
+  }
+  .tracker {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .current {
+    font-size: 2em;
+    margin: 0.5em 0;
+  }
 }
 
 @media screen and (min-width: 1020px) {
