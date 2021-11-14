@@ -7,7 +7,6 @@
 .info {
   padding: 1.5em;
   position: relative;
-  z-index: 1;
   background: #1c1f4a;
   border-radius: 10px;
   margin-top: -10px;
@@ -21,6 +20,25 @@
 .info h3 {
   font-size: 1em;
   font-size: 500;
+  z-index: 99;
+}
+
+.info a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #1c1f4a;
+  display: none;
+  z-index: 1;
+}
+
+.info a:hover::before {
+  display: block;
+}
+
+.info a img {
+  position: relative;
+  z-index: 99;
 }
 
 .title {
@@ -46,6 +64,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 99;
 }
 
 .current {

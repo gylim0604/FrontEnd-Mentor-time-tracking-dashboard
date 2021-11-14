@@ -10,7 +10,6 @@
 .info {
     padding: 1.5em;
     position: relative;
-    z-index: 1;
     background: $dark-blue;
     border-radius: 10px;
     margin-top: -10px;
@@ -18,9 +17,28 @@
         background: lighten($dark-blue, 15%);
         cursor: pointer;
     }
+
     h3 {
         font-size: 1em;
         font-size: $weight-bold;
+        z-index: 99;
+    }
+    a {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $dark-blue;
+            display: none;
+            z-index: 1;
+        }
+        &:hover::before {
+            display: block;
+        }
+        img {
+            position: relative;
+            z-index: 99;
+        }
     }
 }
 
@@ -35,6 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 99;
 }
 .current {
     font-size: 1.75em;
