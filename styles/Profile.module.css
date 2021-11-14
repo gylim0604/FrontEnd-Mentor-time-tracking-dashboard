@@ -90,5 +90,8 @@
             flex-direction: column;
     gap: 1em;
   }
+  .selection ul li:hover {
+    color: white;
+  }
 }
 /*# sourceMappingURL=Profile.module.css.map */

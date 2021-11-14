@@ -67,6 +67,11 @@
         ul {
             flex-direction: column;
             gap: 1em;
+            li {
+                &:hover {
+                    color: white;
+                }
+            }
         }
     }
 }

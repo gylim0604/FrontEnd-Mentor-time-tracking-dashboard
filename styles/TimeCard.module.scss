@@ -13,11 +13,15 @@
     z-index: 1;
     background: $dark-blue;
     border-radius: 10px;
+    margin-top: -10px;
+    &:hover {
+        background: lighten($dark-blue, 15%);
+        cursor: pointer;
+    }
     h3 {
         font-size: 1em;
         font-size: $weight-bold;
     }
-    margin-top: -10px;
 }
 
 .title {

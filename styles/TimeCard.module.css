@@ -13,6 +13,11 @@
   margin-top: -10px;
 }
 
+.info:hover {
+  background: #303782;
+  cursor: pointer;
+}
+
 .info h3 {
   font-size: 1em;
   font-size: 500;
